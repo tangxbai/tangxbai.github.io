@@ -1,0 +1,38 @@
+@import 'constants';
+
+.platform(@attr, @value) {
+    -webkit-@{attr}: @value;
+       -moz-@{attr}: @value;
+        -ms-@{attr}: @value;
+            @{attr}: @value;
+}
+
+.layout-flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.media {
+    .mobile(@content) {
+        @media screen and(min-width: @screen-sm) {
+            @content();
+        }
+    }
+    .tablet(@content) {
+        @media screen and(min-width: @screen-md) {
+            @content();
+        }
+    }
+    .computer(@content) {
+        @media screen and(min-width: @screen-lg) {
+            @content();
+        }
+    }
+    .larger(@content) {
+        @media screen and(min-width: @screen-xl) {
+            @content();
+        }
+    }
+}

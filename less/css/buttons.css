@@ -1,0 +1,90 @@
+.layout-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.post-actions-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  height: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: var(--base-gap);
+  position: relative;
+  overflow: hidden;
+}
+.post-actions-btn:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+}
+.post-actions-btn i,
+.post-actions-btn span {
+  position: relative;
+  z-index: 2;
+}
+.post-actions-btn:last-child {
+  margin-right: 0;
+}
+.post-actions-btn:hover:before {
+  opacity: 0;
+}
+.post-actions-btn.with-text {
+  width: auto;
+  padding: 0 10px;
+  font-size: 13px;
+}
+.post-actions-btn-green {
+  background: linear-gradient(45deg, rgba(91, 206, 174, 0.5) 0%, rgba(91, 206, 174, 0.05) 100%);
+}
+.post-actions-btn-green:before {
+  background-color: #5bceae;
+}
+.post-actions-btn-green:hover {
+  color: #5bceae;
+}
+.post-actions-btn-danger {
+  background: linear-gradient(45deg, rgba(236, 84, 122, 0.5) 0%, rgba(236, 84, 122, 0.05) 100%);
+}
+.post-actions-btn-danger:before {
+  background-color: #ec547a;
+}
+.post-actions-btn-danger:hover {
+  color: #ec547a;
+}
+.post-actions-btn-info {
+  background: linear-gradient(45deg, rgba(55, 150, 246, 0.5) 0%, rgba(55, 150, 246, 0.05) 100%);
+}
+.post-actions-btn-info:before {
+  background-color: #3796f6;
+}
+.post-actions-btn-info:hover {
+  color: #3796f6;
+}
+/*# sourceMappingURL=buttons.css.map */
